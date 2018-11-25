@@ -3,9 +3,11 @@
 
 int main(int argc, char *argv[])
 {
-    QApplication a(argc, argv);
-    MainWindow w;
-    w.show();
+    QCoreApplication::setAttribute(Qt::AA_UseDesktopOpenGL);
 
-    return a.exec();
+    QApplication application(argc, argv);
+    MainWindow window;
+    window.show();
+
+    return application.exec();
 }
